@@ -8,10 +8,10 @@ const checkPalindrom =(string, start , end)=>{
     //     return checkPalindrom(string,start+1,end-1)
     //  }
     //  else return false
-     return string[start]===string[end] && checkPalindrom(string,start+1,end-1);
+     return string[start].toLowerCase()===string[end].toLowerCase() && checkPalindrom(string,start+1,end-1);
 }
-
-console.log(checkPalindrom("5ab b#a%5",0,"5ab b#%5".length-1))
+let palaindrom = "Ab@   *^&ba"
+console.log(checkPalindrom(palaindrom,0,palaindrom.length-1))
 
 
 function isAlphaNumeric(char){
@@ -24,3 +24,4 @@ function isAlphaNumeric(char){
 // console.log(isAlphaNumeric("A"))
 // console.log(isAlphaNumeric("@"))
 // console.log(isAlphaNumeric(" "))
+
