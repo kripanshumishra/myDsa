@@ -16,7 +16,7 @@ def scs ( a, b ):
     i , j = len(dp)-1,len(dp[0])-1
     ls=""
     while i>0 and j >0:
-        print(i,j)
+        # print(i,j)
         if ( a[i-1] == b [ j-1 ] ):
             ls += a[i-1]
             i-=1
@@ -28,10 +28,14 @@ def scs ( a, b ):
             else:
                 ls += b[j-1]
                 j-=1
-    ls+= a[:i]
-    ls+= b[:j]
-    print(ls[::-1])
+    print( i , j  )
+    ls =ls[::-1]
+    ls= a[:i]+ls[:]
+    ls = b[:j]+ls[:]
+    print(ls)
         
-    return [(len(a)+len(b) - dp[-1][-1]) , ls[::-1] ]
+    return [(len(a)+len(b) - dp[-1][-1]) , ls ]
 
-print( scs(a,b) )
+# print( scs(a,b) )
+print( scs("acbbcccaa","bbbcaaaaa") )
+#"abcbbcaaaccaa"
