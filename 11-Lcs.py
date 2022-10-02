@@ -12,8 +12,6 @@ def Lcs(a,b):
                 dp[i][j]= dp[i-1][j-1]+1
             else:
                 dp[i][j] = max(dp[i-1][j],dp[i][ j-1 ])
-
-    # print(dp)
     i= len(dp)-1
     j= len(dp[0])-1
     ls =""
