@@ -1,6 +1,6 @@
 const length = [ 1,2,3,4,5 ,6 ,7 ,8 ]
 // const price  = [ 1,5,8,9,10,17,17,20]
-const price  = [ 1,5,6,9,11,12,14,16]
+const price  = [1, 5, 8, 9, 10, 17, 17, 20]
 const N =8 
 function rod(){
        const  dp = new Array( N+1 ).fill(0) 
