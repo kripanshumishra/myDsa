@@ -20,3 +20,4 @@ def counter (a):
                 dp[i][j] = max( dp[i-1][j] , dp[i][ j-1 ] )    
     return (len(a)-dp[-1][-1])
 print(counter(a))
+print(counter("zzazz")) #0
