@@ -6,6 +6,7 @@ for i in range (len(dp)):
     dp[i] = [math.inf]*len(arr)
 
 
+
 def mcm ( arr ,i ,j , dp ):
     if ( i>=j  ):
         return 0
