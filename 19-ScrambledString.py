@@ -17,34 +17,34 @@
 
 # print(sString( "great" , 0 , 4  ))
 
-# def ss ( string , i , j ):
-#     # if ( i> len(string)  or i>j ):
-#     #     return []
-#     print( i,j )
-#     if ( i > j ):
-#         # print('return kar raha hu ans ', i,j ,[])
-#         return []
-#     if ( i == j  ):
-#         # print('return kar raha hu ans ', i,j ,[string[i]])
-#         return [string[i]]
-#     ans =[]
-#     for k in range ( i , j ,1 ):
-#         # print( k , "this is k for i and j " , i, "and " , j )
-#         lans =[]
-#         x = ss( string , i, k )
-#         y = ss( string , k+1 , j )
-#         for ia in range ( len(x) ):
-#             for ja in range ( len(y) ):
-#                 if( x[ia] + y[ja] != y[ja]+ x[ia] ):
-#                     lans.append( x[ia] + y[ja] )
-#                     lans.append(  y[ja]+ x[ia]  )
-#                 else:
-#                     lans.append( x[ia] + y[ja] )
-#         ans = list(set( ans).union(set(lans) ))
-#     # print('return kar raha hu ans ', i,j ,ans)
-#     return ans
+def ss ( string , i , j ):
+    # if ( i> len(string)  or i>j ):
+    #     return []
+    print( i,j )
+    if ( i > j ):
+        # print('return kar raha hu ans ', i,j ,[])
+        return []
+    if ( i == j  ):
+        # print('return kar raha hu ans ', i,j ,[string[i]])
+        return [string[i]]
+    ans =[]
+    for k in range ( i , j ,1 ):
+        # print( k , "this is k for i and j " , i, "and " , j )
+        lans =[]
+        x = ss( string , i, k )
+        y = ss( string , k+1 , j )
+        for ia in range ( len(x) ):
+            for ja in range ( len(y) ):
+                if( x[ia] + y[ja] != y[ja]+ x[ia] ):
+                    lans.append( x[ia] + y[ja] )
+                    lans.append(  y[ja]+ x[ia]  )
+                else:
+                    lans.append( x[ia] + y[ja] )
+        ans = list(set( ans).union(set(lans) ))
+    # print('return kar raha hu ans ', i,j ,ans)
+    return ans
 
-# # print(ss( "abcde" , 0, 4))
+print(ss( "abcdefg" , 0, 6))
 # print("rgeat")
 
 ## detemine whether two strings are scrambled or not 
@@ -95,7 +95,7 @@ def sSChecker( a , b ,dp ):
     return ans
 
 # print(sSChecker( "abcde" , "caebd",{} )) #false
-print(sSChecker( "abcdbdacbdac" , "bdacabcdbdac",{} )) #false
+# print(sSChecker( "abcdbdacbdac" , "bdacabcdbdac",{} )) #false
 
 "abcdbdacbdac"
 "bdacabcdbdac"
